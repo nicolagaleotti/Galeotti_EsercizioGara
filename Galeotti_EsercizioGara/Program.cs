@@ -16,7 +16,7 @@ namespace Galeotti_EsercizioGara
             List<string> partecipanti = new List<string>();
             for (int i = 1; i <= p; i++)
             {
-                Console.WriteLine("Nome del partecipante: ");
+                Console.WriteLine($"Nome del partecipante {i}: ");
                 string nome = Console.ReadLine();
                 partecipanti.Add(nome);
                 Thread t = new Thread(() => Corri(nome));
@@ -27,9 +27,9 @@ namespace Galeotti_EsercizioGara
 
         private static void Corri(string nome)
         {
-            for (int i = 0; i < 99; i++)
+            for (int i = 1; i < 100; i++)
             {
-                Console.WriteLine($"Il partecipante {nome} è al km {i + 1}.");
+                Console.WriteLine($"Il partecipante {nome} è al km {i}.");
             }
             Console.WriteLine($"Il partecipante {nome} è arrivato al km 100 e ha terminato la corsa.");
         }
